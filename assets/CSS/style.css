@@ -6,7 +6,7 @@
 
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 0.5fr 1fr repeat(3, auto);
+  grid-template-rows: 0.5fr auto repeat(3, auto);
   grid-template-areas:
     "nav-container"
     "order-container"
@@ -18,7 +18,9 @@
 
 
 /* Nav */
-
+.nav-container{
+  grid-area: nav-container;
+}
 .nav-color{
   background-color: #1082E0;
 }
@@ -27,9 +29,11 @@
 }
 /* Order */
 .order-container{
+  grid-area: order-container;
   background-color: #D5D6DE;
 }
 .title-order{
+  margin-top: 10px;
   text-align: center;
 }
 .form-select{
@@ -37,7 +41,9 @@
 }
 
 /* Product */
-
+.product-container{
+  grid-area: product-container;
+}
 
 .img-card{
   width: 90%;
@@ -65,6 +71,7 @@ img {
 
 /* Pages */
 .pages-container{
+  grid-area: pages-container;
   align-items: center;
 }
 .pages-list{
@@ -91,6 +98,7 @@ img {
 /* Footer */
 
 .footer-container{
+  grid-area: footer-container;
   background-color: #055CF7;
   text-align: center;
 }
